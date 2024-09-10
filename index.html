@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knapp På/Av</title>
+    <title>Skylt Uppdatering</title>
     <style>
-        button {
+        #messageBox {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        #updateButton {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -14,18 +20,10 @@
 </head>
 <body>
 
-    <button id="toggleButton" onclick="toggleButton()">Av</button>
+    <div id="messageBox">Ingen uppdatering ännu.</div>
+    <input type="text" id="messageInput" placeholder="Skriv ett meddelande här">
+    <button id="updateButton">Uppdatera Skylt</button>
 
-    <script>
-        function toggleButton() {
-            var button = document.getElementById("toggleButton");
-            if (button.innerHTML === "Av") {
-                button.innerHTML = "På";
-            } else {
-                button.innerHTML = "Av";
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
